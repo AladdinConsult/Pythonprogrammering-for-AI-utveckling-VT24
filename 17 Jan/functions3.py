@@ -47,6 +47,18 @@ def func3(a, b, *args, name= 'John', **kwargs):
 func3(1, 2, 3, name = "Anna", age=34, email= 'anna@email.com')
 
 
+#----------------------------------------------------------------------------------------
+
+min_lista = [1, 2, 3, 4, 5]
+
+min_lista [2] = 10
+
+min_lista.append(6)
+
+min_lista.remove(4)
+
+print(min_lista)
 
 
+min_tuple = ('a', 'b', 'c')
 
