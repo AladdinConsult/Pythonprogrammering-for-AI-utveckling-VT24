@@ -57,8 +57,16 @@ min_lista.append(6)
 
 min_lista.remove(4)
 
+
+
 print(min_lista)
 
 
 min_tuple = ('a', 'b', 'c')
 
+
+min_lista = [1, 2, 3, 5]
+
+min_lista.insert(3, 4)
+
+print(min_lista)
