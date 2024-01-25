@@ -6,7 +6,7 @@ class Person:
         return f'{self.name} is {self.age} years old'
 
 p1 = Person(name= 'Alice', age = 23)
-p2 = Person(name= 'Bob')
+p2 = Person(name= 'Bob',)
 
 print(p1)
 print(p2)
