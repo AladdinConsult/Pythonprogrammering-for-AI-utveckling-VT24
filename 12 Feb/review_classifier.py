@@ -2,6 +2,9 @@ import contractions
 import re
 from string import punctuation
 import json
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.svm import SVC
 
 def clean_text(text):
     # remove contractions
@@ -31,3 +34,30 @@ with open('./12 Feb/data/Pet_Supplies_1000.json', 'r') as in_file:
         review_text = data['reviewText']
         overall = data['overall']
         reviews.append(Review(review_text, overall))
+
+training_data, test_data = train_test_split(reviews, test_size=0.2, random_state=42)
+train_X = [review.cleaned_review_text for review in training_data]
+train_y =  [review.sentiment for review in training_data]
+
+test_X = [review.cleaned_review_text for review in test_data]
+test_y = [review.sentiment for review in test_data]
+
+vectorizer = CountVectorizer()
+vectors = vectorizer.fit_transform(train_X)
+
+clf = SVC(kernel='linear')
+clf.fit(vectors, train_y)
+
+
+
+
+# sentiments = {
+#     'NEGATIVE' : 0,
+#     'NEAUTRAL' : 0,
+#     'POSITIVE' : 0,
+# }
+
+# for review in reviews:
+#     sentiments[review.sentiment] += 1
+
+# print(sentiments)
