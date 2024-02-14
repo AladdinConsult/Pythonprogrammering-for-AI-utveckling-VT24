@@ -48,7 +48,8 @@ vectors = vectorizer.fit_transform(train_X)
 clf = SVC(kernel='linear')
 clf.fit(vectors, train_y)
 
-
+test_vectors = vectorizer.transform(test_X)
+print(clf.score(test_vectors, test_y))
 
 
 # sentiments = {
