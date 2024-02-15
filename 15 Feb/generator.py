@@ -3,7 +3,7 @@ from keras.models import Sequential
 from keras.layers import Dense
 
 def build_generator(input_dim=10):
-    model = Sequential
+    model = Sequential()
 
     #Input layer
     model.add(Dense(32, activation='relu', input_dim=input_dim))
