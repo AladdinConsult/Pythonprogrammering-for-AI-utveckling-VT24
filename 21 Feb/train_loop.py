@@ -92,4 +92,4 @@ def create_gan_model(alpha=2.0, descrimiator_lr=0.0001, generator_lr=0.0001, epo
         print(f'Saving model {model_path}')
         generator.save(model_path)
 
-create_gan_model(epochs=10_000, save_model=True)
+create_gan_model(epochs=10_000, alpha=2.3, save_model=True, model_path='./21 Feb/models/gan_model_new.keras')

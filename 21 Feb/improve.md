@@ -20,3 +20,9 @@ Step two values
 Generated Mean: 0.49638858437538147
 Generatde Min: -0.09695273637771606
 Generatde Max: 1.1575374603271484
+
+Step three values
+
+Generated Mean: 0.37269237637519836
+Generatde Min: -0.0320003442466259
+Generatde Max: 1.1022597551345825
