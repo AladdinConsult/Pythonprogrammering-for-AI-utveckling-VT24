@@ -13,7 +13,7 @@ def load_real_data(filename):
 
 trained_generator = load_model('./21 Feb/models/gan_model_new.keras')
 
-generated_samples = generate_samples_using_trained_model(trained_generator, n_samples=1000)
+generated_samples = generate_samples_using_trained_model(trained_generator, n_samples=10000)
 real_data = load_real_data('./21 Feb/data/random_numbers.txt')
 
 print(f'Generated Mean: {generated_samples.mean()}')
